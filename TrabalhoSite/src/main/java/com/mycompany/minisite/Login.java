@@ -1,4 +1,4 @@
-package com.mycompany.trabalhosite;
+package com.mycompany.minisite;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

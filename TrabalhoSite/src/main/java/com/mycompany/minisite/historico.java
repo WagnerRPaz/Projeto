@@ -1,4 +1,4 @@
-package com.mycompany.trabalhosite;
+package com.mycompany.minisite;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -12,8 +12,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author user
  */
-@WebServlet(name = "calculadora", urlPatterns = {"/calculadora"})
-public class calculadora extends HttpServlet {
+@WebServlet(name = "historico", urlPatterns = {"/historico"})
+public class historico extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -32,10 +32,10 @@ public class calculadora extends HttpServlet {
 
             }
 
-            histo.addPage(" http://localhost:8080/TrabalhoSite/calculadora");
+            histo.addPage(" http://localhost:8080/TrabalhoSite/historico");
 
             session.setAttribute("historicoo", histo);
-            request.getRequestDispatcher("/WEB-INF/calculadora.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/historico.jsp").forward(request, response);
         } else {
             response.sendRedirect("http://localhost:8080/TrabalhoSite/Login");
         }
@@ -44,22 +44,6 @@ public class calculadora extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String exer1 = request.getParameter("exer1");
-        String exer2 = request.getParameter("exer2");
-        String exer3 = request.getParameter("exer3");
-        String exer4 = request.getParameter("exer4");
-        String trb1 = request.getParameter("trabalho1");
-        String trb2 = request.getParameter("trabalho2");
-
-        String resultado;
-        if (exer1 != null && exer2 != null && exer3 != null && exer4 != null && trb1 != null && trb2 != null) {
-
-            int soma = (Integer.parseInt(exer1) + Integer.parseInt(exer2) + Integer.parseInt(exer3)
-                    + Integer.parseInt(exer4) + Integer.parseInt(trb1) + Integer.parseInt(trb2)) / 6;
-            request.setAttribute("resultado", "Sua média é: " + soma);
-            request.getRequestDispatcher("/WEB-INF/calculadora.jsp").forward(request, response);
-        }
-
     }
 
     @Override

@@ -55,6 +55,11 @@
                 .header-right {
                     float: none;
                 }
+                p {
+                    color: rgb(112,128,144);
+                    font-size: 22px;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
             }
         </style>
     </head>
@@ -68,14 +73,21 @@
                 <a href="${pageContext.request.contextPath}/sair">Sair</a>
                 <div class = "usu">
                     <%= session.getAttribute("email")%>
-                    <%= session.getAttribute("senha")%>
                 </div>
             </div>
         </div>
         <div style="padding-left:20px">
             <h1>Responsive Header</h1>
-            <p>Resize the browser window to see the effect.</p>
-            <p>Some content..</p>
+            <p>O nome “Servlet” vem do inglês e dá uma idéia de servidor pequeno, que
+                tem o objetivo de receber requisições HTTP, processá-las e responder
+                esta requisição, seja com HTML, uma imagem, JSON etc.
+                O Servlet precisa estar em um servidor de aplicação, que vai processar
+                as requisições e chamar o Servlet para responder.</p>
+            <p>Para criar nosso Servlet, criamos um novo projeto Web no NetBeans, damos
+                um nome para ele e então selecionamos o Servidor Apache Tomcat como
+                nosso servidor de aplicação.
+                O processo é o mesmo para criação que foi utilizado na aula 2, nos slides
+                mostra o passo a passo e como configurar o Tomcat.</p>
         </div>
     </body>
 </html>

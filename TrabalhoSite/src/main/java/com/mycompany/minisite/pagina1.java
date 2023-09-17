@@ -1,4 +1,4 @@
-package com.mycompany.trabalhosite;
+package com.mycompany.minisite;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -10,10 +10,10 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author user
+ * @author m132854
  */
-@WebServlet(name = "historico", urlPatterns = {"/historico"})
-public class historico extends HttpServlet {
+@WebServlet(name = "pagina1", urlPatterns = {"/pagina1"})
+public class pagina1 extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -32,10 +32,10 @@ public class historico extends HttpServlet {
 
             }
 
-            histo.addPage(" http://localhost:8080/TrabalhoSite/historico");
+            histo.addPage(" http://localhost:8080/TrabalhoSite/pagina1");
 
             session.setAttribute("historicoo", histo);
-            request.getRequestDispatcher("/WEB-INF/historico.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/pagina1.jsp").forward(request, response);
         } else {
             response.sendRedirect("http://localhost:8080/TrabalhoSite/Login");
         }
@@ -44,6 +44,7 @@ public class historico extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
     }
 
     @Override

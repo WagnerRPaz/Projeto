@@ -91,7 +91,6 @@
                     <a href="${pageContext.request.contextPath}/sair">Sair</a>
                     <div class = "usu">
                         <%= session.getAttribute("email")%>
-                        <%= session.getAttribute("senha")%>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-package com.mycompany.trabalhosite;
+package com.mycompany.minisite;
 
 import java.util.ArrayList;
 import java.util.List;
